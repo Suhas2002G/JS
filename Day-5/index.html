@@ -73,21 +73,22 @@
 <div class="mark-form">
         <h2>Calculate Percentage</h2>
         <div class="sub">
-            <label for="">Marks - 1</label>
+            <label for="">Enter Marks of Physics</label>
             <input type="number" id="m1">
         </div>
         <div class="sub">
-            <label for="">Marks - 2</label>
+            <label for="">Enter Marks of Maths</label>
             <input type="number" id="m2">
         </div>
         <div class="sub">
-            <label for="">Marks - 3</label>
+            <label for="">Enter Marks of Chemistry</label>
             <input type="number" id="m3">
         </div>
         <button onclick="percentage()">Calculate Percentage</button>
  
     <br><br>
     
+    <label for="marks" id="marks"></label><br>
      <label for="result" id="result"></label><br>
      <label for="result1" id="result1"></label>
     
@@ -103,10 +104,14 @@
             let avgmarks=totalmarks/3;
             // alert(`Percentage = ${avgmarks}`)
 
+
+
             const f=document.getElementById('result')
             f.innerHTML=`Percentage : ${avgmarks}`
 
-            
+            const f2=document.getElementById('marks')
+            f2.innerHTML=`Physics : ${m1},  Maths : ${m2},  Chemistry : ${m3} `
+
             const f1 = document.getElementById('result1');
 
             if (avgmarks >= 40 && avgmarks <= 75) {
@@ -121,8 +126,10 @@
             else {
                 f1.innerHTML = "Result : FAIL";
         }
+        
+    }
             
-        }
+        
 
      
 
