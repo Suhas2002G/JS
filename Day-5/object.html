@@ -17,8 +17,13 @@
         pname:'virat',
         team:'RCB',
         mp:100,
-        runs: 10000,
-        'title-won':7
+        runs: 7680,
+        'title-won':7,
+
+        calculateAvg:function(){
+            const avg=this.runs/this.mp;
+            console.log(avg)
+        }
     }
     console.log(player1.pname)      //virat
     console.log(player1.team)       //RCB
@@ -31,6 +36,8 @@
     console.log(player1['runs']-player1['mp'])
 
     console.log(player1['title-won'])
+
+    player1.calculateAvg()
 </script>
 
 
