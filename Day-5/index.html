@@ -84,11 +84,12 @@
             <label for="">Enter Marks of Chemistry</label>
             <input type="number" id="m3">
         </div>
-        <button onclick="percentage()">Calculate Percentage</button>
+        <button onclick="percentage(displayResult)">Calculate Percentage</button>
  
     <br><br>
     
     <label for="marks" id="marks"></label><br>
+    <label for="marks" id="totalmarks"></label><br>
      <label for="result" id="result"></label><br>
      <label for="result1" id="result1"></label>
     
@@ -96,21 +97,27 @@
 
 
     <script>
-        function percentage(){
+        function percentage(callback){
             let m1=parseInt(document.getElementById('m1').value)
             let m2=parseInt(document.getElementById('m2').value)
             let m3=parseInt(document.getElementById('m3').value)
             let totalmarks=m1+m2+m3;
             let avgmarks=totalmarks/3;
             // alert(`Percentage = ${avgmarks}`)
+            // displayResult(m1,m2,m3,avgmarks)
+            callback(m1,m2,m3,totalmarks,avgmarks)
+        }
 
 
-
+function displayResult(m1,m2,m3,totalmarks,avgmarks){
             const f=document.getElementById('result')
             f.innerHTML=`Percentage : ${avgmarks}`
 
             const f2=document.getElementById('marks')
             f2.innerHTML=`Physics : ${m1},  Maths : ${m2},  Chemistry : ${m3} `
+
+            const f4=document.getElementById('totalmarks')
+            f4.innerHTML=`Total Marks : ${totalmarks} `
 
             const f1 = document.getElementById('result1');
 
@@ -129,7 +136,15 @@
         
     }
             
-        
+// callback function : a function is passed as parameter to another function
+// function displayResult(value){
+//     console.log(`The result is ${value}`)
+// }
+// function addition(a,b,callback){
+//     const c = a+b
+//     callback(c)
+// }
+// addition(100,200,displayResult)     //index2.html:55 The result is 300
 
      
 
