@@ -1,0 +1,98 @@
+-----------    JAVASCRIPT      ------------
+
+
+
+1. 100
+2. 100
+3. 101
+4. 100
+
+ 
+1. I am in Main 
+2. I am in Brazil
+3. I am in Argetina
+4. I am back in Brazil
+5. I am finnally back in Main
+
+
+datatypes :
+primitive : always go by call by value
+non-primitive : go by call by reference
+
+
+CALL REFERENCE
+
+1. 
+2.
+3.
+4. 
+
+
+
+
+Call by Value: 
+A method of passing arguments to a function where a copy of the actual 
+parameter's value is passed. Changes made to the parameter inside the 
+function do not affect the original value.
+
+Call by Reference: 
+A method of passing arguments to a function where a reference to the 
+actual parameter is passed. Changes made to the parameter inside the function 
+will affect the original value.
+
+
+
+
+int a;      //intialization
+a=10        //declaration
+
+
+const a=10  //directly done above 2 steps
+//cannot update 
+
+
+let a 
+a=10
+// further modification is possible 
+
+
+
+
+Learn difference : 
+let a : block level scope (local variable)  [[if block ]]
+var a : function scope within that function, we can use 
+const a : block level scope but cannot changed
+
+
+
+
+
+
+Scope of Variable : 
+1. block level scope : visibility of variable is limited to respective block of code 
+2. 
+
+
+
+
+
+
+
+
+
+Day-3
+Date : 26-11-2024
+
+
+
+
+
+
+
+
+
+
+
+
+
+

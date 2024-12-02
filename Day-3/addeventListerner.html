@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rcb{
+            padding: 15px;
+            margin: 30px;
+            display: inline-block;
+            background-color: rgb(188, 13, 13);
+            color: white;
+            border-radius: 4px;
+            padding: 15px; 
+            cursor: pointer;
+            box-shadow: 2px 2px 4px rgb(32, 14, 3);
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="rcb">RCB</h1>
+
+
+    <script>
+        const r=document.querySelector('.rcb')
+        r.addEventListener('mouseenter',displayr)
+        // here we have added behaviour through js, ('event',function_name)
+
+        function displayr(){
+            r.innerHTML=`<ol>
+                <li>Virat Kohali</li>
+                <li>Rajat Patidar</li>
+                <li>Bhuvi Kumar</li>
+                </ol>` 
+        }
+    </script>
+</body>
+</html>

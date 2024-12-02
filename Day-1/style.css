@@ -1,0 +1,16 @@
+.my-heading{
+    background-color: rgb(222, 140, 140);
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.click-me-btn{
+    background-color: rgb(188, 13, 13);
+    color: white;
+    border-radius: 4px;
+    padding: 7px 15px;      
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .itv-red{
+        color: red;
+    }
+    .itv-blue{
+        color: blue;
+    }
+
+</style>
+<body>
+<div>
+   <h1 class="itv-red">Welcome to ITV Pune</h1>
+   <h1 class="itv-blue">Welcome to ITV Mumbai</h1>
+   <p>Suhas SG</p>
+</div>
+<button onclick="display()">Click me</button>
+
+
+
+
+
+
+
+    <script>
+        a=10
+        b=20
+        c=a+b
+        console.log(c)
+        
+    function display(){
+        // alert('Welcome')
+        let headingElement=document.querySelector('.itv-blue')
+        headingElement.innerHTML='Welcome to india'
+    }
+
+    // let headingElement=document.querySelector('.itv-blue')
+    // headingElement.innerHTML='Welcome to india'
+    </script>
+</body>
+</html>

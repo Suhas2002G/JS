@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .team-csk{
+        color: rgb(185, 54, 6);
+        background: linear-gradient(115deg, rgb(151, 173, 22), rgb(207, 219, 29), rgb(237, 240, 85));
+        padding: 20px;
+        display: inline-block;
+        border-radius: 20px;
+    }
+    .team-mum{
+        color: rgb(236, 239, 246);
+        /* background: rgb(4, 23, 130); */
+        background: linear-gradient(115deg, blue, rgb(149, 149, 225), blue);
+        padding: 20px;
+        display: inline-block;
+        border-radius: 20px;
+        box-shadow: 3px 4px 12px blue;
+
+    }
+    button{
+        background-color: rgb(188, 13, 13);
+        color: white;
+        margin: 20px;
+        border-radius: 4px;
+        padding: 7px 15px;      
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+</style>
+<body>
+    <h1 class="team-csk">Chennai Super Kings</h1>
+    <button onclick="display()">Change team</button>
+
+    <!-- <div id="csk">
+        <p>one</p>
+        <p>two</p>
+        <p>three</p>
+    </div>
+    <button onclick="display1()">csk</button> -->
+
+
+    <script>
+    // class selector /
+        function display(){
+            const t=document.querySelector('.team-csk')
+            t.classList.add('team-mum')      // to apply external css 
+            t.innerHTML='Mumbai Indians'
+            // t.style.setProperty('color','blue')
+            
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    // // id selector 
+    //     function display1(){
+    //         document.getElementById('csk').innerHTML='DHONI'
+    //     }
+    </script>
+</body>
+</html>

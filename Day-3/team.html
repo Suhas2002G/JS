@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rcb{
+            padding: 15px;
+            margin: 30px;
+            display: inline-block;
+            background-color: rgb(188, 13, 13);
+            color: white;
+            border-radius: 4px;
+            padding: 15px; 
+            cursor: pointer;
+            box-shadow: 2px 2px 4px rgb(32, 14, 3);
+        }
+        .csk{
+            padding: 15px;
+            margin: 30px;
+            display: inline-block;
+            background-color: rgb(230, 204, 59);
+            color: white;
+            border-radius: 4px;
+            padding: 15px; 
+            cursor: pointer;
+            box-shadow: 2px 2px 4px rgb(98, 93, 6);
+        }
+        .mi{
+            padding: 15px;
+            margin: 30px;
+            display: inline-block;
+            background-color: rgb(16, 55, 182);
+            color: white;
+            border-radius: 4px;
+            padding: 15px; 
+            cursor: pointer;
+            box-shadow: 2px 2px 4px rgb(9, 8, 81);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="rcb" onclick="displayr()">RCB</h1>
+    <h1 class="csk" onclick="displayc()">CSK</h1>
+    <h1 class="mi" onclick="displaym()">MI</h1>
+    
+
+
+    <script>
+        x=1
+        function displayr(){
+            if(x==1){
+            const r=document.querySelector('.rcb')
+                r.innerHTML=`<ol>
+                <li>Virat Kohali</li>
+                <li>Rajat Patidar</li>
+                <li>Bhuvi Kumar</li>
+                </ol>` 
+                x=0
+        }
+        else{
+            const r=document.querySelector('.rcb')
+            r.innerHTML='RCB'
+            x=1
+        }
+}
+        function displayc(){
+            const r=document.querySelector('.csk')
+            r.innerHTML=`<ol>
+                <li>MS Dhoni</li>
+                <li>Ravindra Jadeja</li>
+                <li>Rutu Gaikawad</li>
+            </ol>` 
+        }
+        function displaym(){
+            const r=document.querySelector('.mi')
+            r.innerHTML=`<ol>
+                <li>Rohit Sharma</li>
+                <li>J. Bumrah</li>
+                <li>Surya Yadav</li>
+                </ol>` 
+        }
+    </script>
+</body>
+</html>

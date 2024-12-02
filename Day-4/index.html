@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(255, 245, 245);
+            font-family: 'Times New Roman', Times, serif;
+        }
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Diffrence between</h2>
+    <h2>let | var | const</h2>
+
+
+
+
+    
+
+
+    <script>
+        // a=10;
+        // console.log(typeof a)       //number 
+
+        // b='hello';
+        // console.log(typeof b)       //string
+
+        // c=true;
+        // console.log(typeof c)       //boolean
+
+        // cars=[1,'apple',false]
+        // console.log(typeof cars)    //type of array is 'object'
+
+
+// var has global scope 
+function display()
+{
+    {
+        var a = 50
+    }
+    {
+
+    }
+    {
+
+    }
+    console.log(a)     //50
+}
+display()
+
+
+// let and const has local scope 
+function display1()
+{
+    {
+        const a = 50
+        console.log(a)  //50
+    }
+    {
+
+    }
+    {
+
+    }
+    console.log(a)   //index.html:75 Uncaught ReferenceError: a is not defined
+}
+display1()  
+
+
+
+
+// `````````    let vs const        ````````````````
+
+// In case of let, we can declare variable and after ward we can initialize the value 
+let a
+console.log(a)   //undefined
+a=10            //we can afterward initialize value
+console.log(a)   //10
+
+
+// In case of const, if we declare variable, then at same time we have to initalize value
+// we cannot reinitialize the value
+const b = 50
+
+    </script>
+</body>
+</html>
