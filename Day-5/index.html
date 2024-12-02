@@ -4,10 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day-5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* background: linear-gradient(120deg, #ece66f, #18b104, #ece66f); */
+        }
+
+        .mark-form {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            background: linear-gradient(120deg, #afeaa7, #ece66f);
+        }
+
+        .mark-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .sub {
+            margin-bottom: 15px;
+        }
+
+        .sub label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .sub input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff2d2d;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #a60909;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Day-5</h1>
+<div class="mark-form">
+        <h2>Calculate Percentage</h2>
+        <div class="sub">
+            <label for="">Marks - 1</label>
+            <input type="number" id="m1">
+        </div>
+        <div class="sub">
+            <label for="">Marks - 2</label>
+            <input type="number" id="m2">
+        </div>
+        <div class="sub">
+            <label for="">Marks - 3</label>
+            <input type="number" id="m3">
+        </div>
+        <button onclick="percentage()">Calculate Percentage</button>
+ 
+    <br><br>
     
+     <label for="result" id="result"></label><br>
+     <label for="result1" id="result1"></label>
+    
+</div>
 
+
+    <script>
+        function percentage(){
+            let m1=parseInt(document.getElementById('m1').value)
+            let m2=parseInt(document.getElementById('m2').value)
+            let m3=parseInt(document.getElementById('m3').value)
+            let totalmarks=m1+m2+m3;
+            let avgmarks=totalmarks/3;
+            // alert(`Percentage = ${avgmarks}`)
+
+            const f=document.getElementById('result')
+            f.innerHTML=`Percentage : ${avgmarks}`
+
+            
+            const f1 = document.getElementById('result1');
+
+            if (avgmarks >= 40 && avgmarks <= 75) {
+                f1.innerHTML = "Result : PASS with Grade - C";
+            } 
+            else if (avgmarks > 75 && avgmarks < 85) {
+                f1.innerHTML = "Result : PASS with Grade - B";
+            } 
+            else if (avgmarks > 85 && avgmarks <= 100) {
+                f1.innerHTML = "Result : PASS with Grade - A";
+            } 
+            else {
+                f1.innerHTML = "Result : FAIL";
+        }
+            
+        }
+
+     
+
+
+    </script>
 </body>
 </html>
