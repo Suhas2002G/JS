@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+
 
     <script>
 
@@ -28,22 +28,37 @@
 //   []   list
 //   [ {}, {}, {} ]   list of objects
 
+
 //object inside object
-player={
-    jno : 18,
-    name : 'virat',
-    centuries:{
-        test : 31,
-        odi : 50,
-        t20i : 1
-    }
+// player={
+//     jno : 18,
+//     name : 'virat',
+//     centuries:{
+//         test : 31,
+//         odi : 50,
+//         t20i : 1
+//     }
+// }
+// console.log(player)
+
+// console.log(player.centuries.odi)       //50
+
+// //virat has scored 50 centuries in odi
+// console.log(`${player.name} has scored ${player.centuries.odi} centuries in odi`)
+
+
+
+//another way to create object with already defined variable
+let productId=100
+let productName='Mobile'
+
+product = {
+    productId,
+    productName
 }
-console.log(player)
+console.log(product)    //{productId: 100, productName: 'Mobile'}
 
-console.log(player.centuries.odi)       //50
 
-//virat has scored 50 centuries in odi
-console.log(`${player.name} has scored ${player.centuries.odi} centuries in odi`)
 
 
 </script>
