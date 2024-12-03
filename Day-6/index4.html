@@ -39,6 +39,8 @@
 
 
 
+
+
 // Display an array with double values from numbers array
 // o/p : [2,4,6,8,10,12]
 
@@ -64,6 +66,16 @@ const number4=numbers.map((n)=>n*2)
 console.log('Doubled array using map() method ', number4)
 
 
+// solution - 3 : using reduce() method
+// Reduces an array to a single value by applying a function to each element (and an accumulator).
+let sum1 = numbers.reduce(
+    (n,acc)=>{
+        return n+acc
+    },0
+)
+console.log('Sum using reduce() method : ',sum1)
+
+
 
 let odd=[]
 for(let n of numbers){
@@ -84,7 +96,13 @@ const numbers1=numbers.map(
 )
 console.log(numbers1) //[1, undefined, 3, undefined, 5, undefined]
 
+
+
+
+
+
 //Q3 do above using : filter() method 
+//Filters elements of an array based on a condition and returns a new array.
 const numbers2=numbers.filter(
     (n)=>{
         if(n % 2 != 0){
@@ -97,8 +115,9 @@ console.log(numbers2)
 
 
 
-//
 
+// Q. sum of elements of odd numbers : reduce() method
+n=[1,2,3,4,5]
 
 
 

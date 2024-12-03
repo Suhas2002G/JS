@@ -1,0 +1,59 @@
+In JavaScript, map, filter, and reduce are array methods used for functional programming. Each serves a distinct purpose in processing arrays. Here's a comparison:
+
+1. map:
+Purpose: Transforms each element of an array and returns a new array.
+Returns: A new array with the same number of elements as the original.
+Use Case: Apply a function to every element (e.g., double numbers, format strings).
+Example:
+javascript
+Copy code
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(n => n * 2);
+console.log(doubled); // Output: [2, 4, 6, 8]
+
+
+2. filter:
+Purpose: Filters elements of an array based on a condition and returns a new array.
+Returns: A new array with elements that pass the condition (may have fewer elements than the original).
+Use Case: Extract specific elements (e.g., only even numbers, strings longer than 5 characters).
+Example:
+javascript
+Copy code
+const numbers = [1, 2, 3, 4];
+const evens = numbers.filter(n => n % 2 === 0);
+console.log(evens); // Output: [2, 4]
+
+
+3. reduce:
+Purpose: Reduces an array to a single value by applying a function to each element (and an accumulator).
+Returns: A single value (number, string, object, etc.).
+Use Case: Summing numbers, finding a product, flattening arrays, or constructing objects.
+Example:
+javascript
+Copy code
+const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((acc, n) => acc + n, 0);
+console.log(sum); // Output: 10
+Key Differences:
+Feature	map	filter	reduce
+Purpose	Transform elements	Filter elements	Reduce to a single value
+Output	Array (same size)	Array (subset)	Single value (any type)
+Callback Function	Required for transform	Required for condition	Required for accumulator logic
+Common Use Cases	Modify data	Extract data	Aggregate data
+Combined Use Example:
+javascript
+Copy code
+const numbers = [1, 2, 3, 4, 5, 6];
+
+// Double the odd numbers and calculate their sum
+const result = numbers
+  .filter(n => n % 2 !== 0)         // Filter odd numbers
+  .map(n => n * 2)                  // Double them
+  .reduce((acc, n) => acc + n, 0);  // Sum them up
+
+console.log(result); // Output: 18
+When to Use Each:
+Use map when you need to transform the data.
+Use filter when you need to select specific elements.
+Use reduce when you need to combine elements into a single result.
+Let me know if you'd like further examples or a deep dive!
