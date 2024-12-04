@@ -20,6 +20,28 @@ console.log(n)
 // solution : spread operator
 let n1=[...number,70]   //[10, 20, 30, 40, 70]
 console.log(n1)
+
+
+//spread operator for object
+player={
+    rno:18,
+    name:"Virat",
+    mp:100,
+    rs:5000
+}
+
+let{rno,name,...c}=player
+console.log(c)  //{mp: 100, rs: 5000} rest operator
+
+let player1={...player,titleWon:7}
+console.log(player1)   //{rno: 18, name: 'Virat', mp: 100, rs: 5000, titleWon: 7}
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
