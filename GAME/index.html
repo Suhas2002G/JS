@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Rock Paper Scissors Game</h1>
+    <p class="heading">Rock Paper Scissors Game</p>
     <div class="game-container">
         <button class="player-btn" id="rock-btn"><img src="images/rock-emoji.png" alt=""></button>
         <button class="player-btn" id="paper-btn"><img src="images/paper-emoji.png" alt=""></button>
@@ -15,7 +20,8 @@
         <p id="moves" class="info-display">Player Move :       |       Computer Move : </p>
         <p id="results" class="info-display">Result : </p>
         <p id="score" class="info-display">Wins : 0 , Loss : 0 , Tie : 0</p>
-        <button class="player-btn js-autoplay-btn" id="">AutoPlay</button>
+        <button class="player-btn js-autoplay-btn" id="">Start AutoPlay</button>
+        
     </div>
     
 
@@ -49,18 +55,39 @@
         const scissorsBtnElement=document.getElementById('scissors-btn')
         scissorsBtnElement.addEventListener('click',()=>{playGame('Scissors')})
 
+       
 
         var autoplayBtnElement=document.querySelector('.js-autoplay-btn')
         autoplayBtnElement.addEventListener('click',autoplayMode)
 
-        function autoplayMode(){
-            // console.log('autoplay is clicked')
-            setInterval(()=>{
-            let computerGeneratedPlayerMove=generateComputerMove()
-            playGame(computerGeneratedPlayerMove)
-            
-        },2000)
+
+        let isAutoPlay = false;
+let intervalId;
+
+function autoplayMode() {
+    if (isAutoPlay === false) {
+        intervalId = setInterval(() => {
+            let computerGeneratedPlayerMove = generateComputerMove();
+            playGame(computerGeneratedPlayerMove);
+        }, 2000);
+        autoplayBtnElement.style.setProperty('background-color','rgb(26, 8, 131)')
+        autoplayBtnElement.innerHTML=('Stop Autoplay')
+        isAutoPlay = true; // Set autoplay state to true
+        
+        
+    } else {
+        clearInterval(intervalId); // Use clearInterval to stop the interval
+        autoplayBtnElement.style.setProperty('background-color','rgb(202, 26, 26)')
+        autoplayBtnElement.innerHTML=('Start Autoplay')
+        isAutoPlay = false; // Reset autoplay state to false
     }
+}
+
+
+    
+
+
+
 
         function playGame(playerMove)
         {
