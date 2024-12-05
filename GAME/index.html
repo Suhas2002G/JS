@@ -9,9 +9,9 @@
 <body>
     <h1>Rock Paper Scissors Game</h1>
     <div class="game-container">
-        <button class="player-btn" onclick="playGame('Rock')"><img src="images/rock-emoji.png" alt=""></button>
-        <button class="player-btn" onclick="playGame('Paper')"><img src="images/paper-emoji.png" alt=""></button>
-        <button class="player-btn" onclick="playGame('Scissors')"><img src="images/scissors-emoji.png" alt=""></button>
+        <button class="player-btn" id="rock-btn"><img src="images/rock-emoji.png" alt=""></button>
+        <button class="player-btn" id="paper-btn"><img src="images/paper-emoji.png" alt=""></button>
+        <button class="player-btn" id="scissors-btn"><img src="images/scissors-emoji.png" alt=""></button>
         <p id="moves" class="info-display">Player Move :       |       Computer Move : </p>
         <p id="results" class="info-display">Result : </p>
         <p id="score" class="info-display">Wins : 0 , Loss : 0 , Tie : 0</p>
@@ -39,6 +39,17 @@
                 case 's': playGame('Scissors');
             }
         })
+
+        const rockBtnElement=document.getElementById('rock-btn')
+        rockBtnElement.addEventListener('click',()=>{playGame('Rock')})
+
+        const paperBtnElement=document.getElementById('paper-btn')
+        paperBtnElement.addEventListener('click',()=>{playGame('Paper')})
+
+        const scissorsBtnElement=document.getElementById('scissors-btn')
+        scissorsBtnElement.addEventListener('click',()=>{playGame('Scissors')})
+
+
         function playGame(playerMove)
         {
             let computerMove=generateComputerMove()
